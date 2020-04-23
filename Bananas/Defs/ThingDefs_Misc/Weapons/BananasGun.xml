@@ -5,70 +5,60 @@
     <defName>Ammo_Bananas</defName>
     <label>bananas bullet</label>
     <graphicData>
-      <texPath>Things/Projectile/Bullet_Small</texPath>
+      <texPath>Things/Projectile/Bullet_Shotgun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-	<thingClass>Projectile_Explosive</thingClass>
     <projectile>
-      <flyOverhead>false</flyOverhead>
-      <damageAmountBase>100</damageAmountBase>
-      <speed>10</speed>
-	  <damageDef>Flame</damageDef>
-      <explosionRadius>0.1</explosionRadius>
-      <preExplosionSpawnThingDef>Filth_Fuel</preExplosionSpawnThingDef>
-      <preExplosionSpawnChance>0</preExplosionSpawnChance>
-      <ai_IsIncendiary>false</ai_IsIncendiary>
+      <damageDef>Bullet</damageDef>
+      <damageAmountBase>50</damageAmountBase>
+      <stoppingPower>3</stoppingPower>
+      <armorPenetrationBase>0.14</armorPenetrationBase>
+      <speed>300</speed>
     </projectile>
   </ThingDef>
 
   <ThingDef ParentName="BaseHumanMakeableGun">
     <defName>BananasGun</defName>
     <label>bananas</label>
+    <description>Fucking bananas madafaka.</description>
     <graphicData>
       <texPath>Things/Item/Equipment/WeaponRanged/BananasGun</texPath>
       <graphicClass>Graphic_Single</graphicClass>
     </graphicData>
-    <soundInteract>Interact_Autopistol</soundInteract>
-    <recipeMaker>
-      <researchPrerequisite>BlowbackOperation</researchPrerequisite>
-      <skillRequirements>
-        <Crafting>4</Crafting>
-      </skillRequirements>
-    </recipeMaker>
-    <weaponTags>
-      <li>SimpleGun</li>
-    </weaponTags>
+    <soundInteract>Interact_Shotgun</soundInteract>
     <statBases>
-      <WorkToMake>5000</WorkToMake>
-      <Mass>1.2</Mass>
-      <AccuracyTouch>1.00</AccuracyTouch>
-      <AccuracyShort>1.00</AccuracyShort>
-      <AccuracyMedium>1.00</AccuracyMedium>
-      <AccuracyLong>1.00</AccuracyLong>
-      <RangedWeapon_Cooldown>1</RangedWeapon_Cooldown>
+      <WorkToMake>12000</WorkToMake>
+      <Mass>3.4</Mass>
+      <AccuracyTouch>1</AccuracyTouch>
+      <AccuracyShort>1</AccuracyShort>
+      <AccuracyMedium>1</AccuracyMedium>
+      <AccuracyLong>1</AccuracyLong>
+      <RangedWeapon_Cooldown>0.25</RangedWeapon_Cooldown>
     </statBases>
     <costList>
       <Steel>60</Steel>
-      <ComponentIndustrial>10</ComponentIndustrial>
+      <ComponentIndustrial>3</ComponentIndustrial>
     </costList>
+    <recipeMaker>
+      <skillRequirements>
+        <Crafting>5</Crafting>
+      </skillRequirements>
+    </recipeMaker>
     <verbs>
       <li>
         <verbClass>Verb_Shoot</verbClass>
         <hasStandardCommand>true</hasStandardCommand>
         <defaultProjectile>Ammo_Bananas</defaultProjectile>
-        <warmupTime>0.1</warmupTime>
-        <range>600.5</range>
-		<burstShotCount>20</burstShotCount>
-        <ticksBetweenBurstShots>5</ticksBetweenBurstShots>
-        <soundCast>Shot_Autopistol</soundCast>
-        <soundCastTail>GunTail_Light</soundCastTail>
-        <muzzleFlashScale>20</muzzleFlashScale>
-		<forcedMissRadius>1.9</forcedMissRadius>
+        <warmupTime>0.05</warmupTime>
+        <range>15.9</range>
+        <soundCast>Shot_Shotgun</soundCast>
+        <soundCastTail>GunTail_Heavy</soundCastTail>
+        <muzzleFlashScale>9</muzzleFlashScale>
       </li>
     </verbs>
     <tools>
       <li>
-        <label>grip</label>
+        <label>stock</label>
         <capacities>
           <li>Blunt</li>
         </capacities>
@@ -86,6 +76,5 @@
       </li>
     </tools>
   </ThingDef>
-
   
 </Defs>

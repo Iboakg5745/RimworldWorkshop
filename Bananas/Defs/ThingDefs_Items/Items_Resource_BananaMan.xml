@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <ThingDef ParentName="LeatherBase">
+    <defName>Leather_Bananas</defName>
+    <label>Bananaskin</label>
+    <description>The strong furry leather of a bear. Compared to most leather, it is quite a bit tougher and a bit better at all kinds of temperature regulation.</description>
+    <graphicData>
+      <color>(112,82,65)</color>
+    </graphicData>
+    <statBases>
+      <MarketValue>333</MarketValue>
+      <StuffPower_Armor_Sharp>102</StuffPower_Armor_Sharp>
+      <StuffPower_Insulation_Cold>200</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>200</StuffPower_Insulation_Heat>
+    </statBases>
+    <stuffProps>
+      <color>(255,255,51)</color>
+      <commonality>0.05</commonality>
+      <statFactors>
+        <Beauty>100</Beauty>
+      </statFactors>
+    </stuffProps>
+  </ThingDef>
+</Defs>
